@@ -15,7 +15,7 @@ function isPrime(val){
     }
   }
   return true;
- }
+ };
  
  // test /
 //  console.log(isPrime(3));

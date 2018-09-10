@@ -24,3 +24,4 @@ function isPrime(val){
 //  console.log(isPrime());
 //  console.log(isPrime([3]));
 //  console.log(isPrime('3'));
+

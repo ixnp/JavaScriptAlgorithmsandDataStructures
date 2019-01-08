@@ -31,13 +31,21 @@ Within the addNumbers function, invoke the callback function as many times as ne
 
 Return the modified array.
 ------------------------------------------------------------------------------------------------ */
-
 const addValues = (arr, value) => {
-  // Solution code here...
+  arr.push(value);
+};
+/////// without the use of push
+const addValues2 = (arr, value) => {
+  addOne = arr.length++;
+  arr[addOne] = value;
 };
 
 const addNumbers = (num, arr, times, callback) => {
-  // Solution code here...
+  while (times > 0) {
+    callback(arr, num);
+    times--;
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -53,11 +61,17 @@ Return the modified array.
 ------------------------------------------------------------------------------------------------ */
 
 const removeOne = (num, arr) => {
-  // Solution code here...
+  if (num % 3 === 2) {
+    arr.pop();
+  }
+  return arr;
 };
 
 const removeElements = (arr, callback) => {
-  // Solution code here...
+  for (let i = 0; i < arr.length; i++) {
+    callback(arr[i], arr);
+  }
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,7 +81,10 @@ Write a function named removeWithForEach that produces the same output as challe
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithForEach = (arr, callback) => {
-  // Solution code here...
+  arr.forEach(function(el) {
+    callback(el, arr);
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -81,7 +98,12 @@ This anonymous function should accept up to three arguments: the element, the in
 ------------------------------------------------------------------------------------------------ */
 
 const removeWithAnon = arr => {
-  // Solution code here...
+  arr.forEach(function(el) {
+    if (el % 3 === 2) {
+      arr.pop();
+    }
+  });
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +124,13 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = availableItems => {
-  // Solution code here...
+  let list = [];
+  availableItems.forEach(function(el) {
+    if (el.available === true) {
+      list.push(el.name);
+    }
+  });
+  return list;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -120,7 +148,19 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = arr => {
-  // Solution code here...
+  let outPut = [];
+  arr.forEach(function(el) {
+    if (el % 15 === 0) {
+      outPut.push("Fizz Buzz");
+    } else if (el % 5 === 0) {
+      outPut.push("Buzz");
+    } else if (el % 3 === 0) {
+      outPut.push("Fizz");
+    } else {
+      outPut.push(el);
+    }
+  });
+  return outPut;
 };
 
 /* ------------------------------------------------------------------------------------------------

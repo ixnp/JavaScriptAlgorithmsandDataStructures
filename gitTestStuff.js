@@ -3,6 +3,7 @@ const sortBackwards = arr => {
     let first = arr[j];
     let last = arr[i];
     arr[j] = last;
+    push test 
     arr[i] = first;
   }
   return arr;

@@ -19,3 +19,4 @@ hasDupes('abcdefg');
 hasDuplicate('');
 //should return false 
 hasDuplicate(5);
+//

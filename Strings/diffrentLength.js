@@ -17,3 +17,4 @@ diffLength('aaaa','aaa');
 diffLength('','');
 // will return false 'is not a string'
 diffLength(3,53);
+//

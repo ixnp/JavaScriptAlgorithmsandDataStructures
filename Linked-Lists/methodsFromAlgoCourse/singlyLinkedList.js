@@ -151,3 +151,8 @@ list.push('<3');
 // test method here
 
 list.print();
+// Big O
+//insertion O(1)
+//Removal O(1) or O(n)
+//Searching O(n)
+//Access O(n)

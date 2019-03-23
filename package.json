@@ -4,7 +4,7 @@
   "description": "",
   "main": "gitTestStuff.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest test"
   },
   "repository": {
     "type": "git",
@@ -16,8 +16,5 @@
   "bugs": {
     "url": "https://github.com/ixnp/WhiteBoardPractice/issues"
   },
-  "homepage": "https://github.com/ixnp/WhiteBoardPractice#readme",
-  "dependencies": {
-    "jest": "^24.5.0"
-  }
+  "homepage": "https://github.com/ixnp/WhiteBoardPractice#readme"
 }

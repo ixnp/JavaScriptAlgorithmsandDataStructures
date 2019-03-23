@@ -23,3 +23,8 @@
 //keeptrack of rows and cols
 //var: islancCount=0, isIsland = true;
 //if row+1 row-1 is 1 and col+1 and col-1 v
+
+//create a object with the keys island, 
+//each island contains the arr[row][col]
+//check object for corodinates 
+//if exsist don't 

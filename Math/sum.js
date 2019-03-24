@@ -1,27 +1,38 @@
-// Given an array of integers, find the sum of its elements.
+//write a function that retruns the sum of two numbers
+//write a function that returns the sum of all numbers regardless of # of params
 
-// For example, if the array [1,2,3], 1+2+3=6 so return 6.
-// I can use the reduce method or a loop;
+function addTwo(a, b) {
+  return a + b
+};
 
-function sum(arr){
 
-  let sum = arr.reduce((accumulator, currentValue, currentIndex, array) => {
-    return accumulator + currentValue;
-  },0);
-  
-  return sum;
-  };
-  
-  //or
-  
-  function sum(arr){
-    let sum = 0;
-    for(let i = 0; i < arr.length; i++){
-      sum = arr[i] + sum;
-  
-    }
-    return sum;
+
+function addAll(...param) {
+  let sum = 0;
+  for (let i = 0; i < param.length; i++) {
+    sum = sum + param[i]
   }
-  
-  
-  sum([1,2,3]);
+  return sum
+}
+
+
+function addAllReduce(...param) {
+  let reducer = (accumulator, currentval) => accumulator + currentval;
+  return param.reduce(reducer)
+}
+
+function addAllForEach(...param) {
+  let sum = 0;
+  param.forEach((item) => {
+    sum += item;
+  })
+  return sum;
+}
+
+addTwo(1, 2);
+
+addAll(1, 2, 3, 4, 5, 6);
+
+addAllReduce(1, 2, 3, 4, 5, 6, 10);
+
+addAllForEach(1, 2, 3, 4, 5, 6, 10, 11);

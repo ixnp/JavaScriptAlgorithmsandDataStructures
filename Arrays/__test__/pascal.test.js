@@ -1,5 +1,5 @@
 "use strict";
-//testing template
+
 const pascal = require("../pascal.js");
 // Sets spies on console object to make it possible to convert them into test failures. 
 const spyLog = jest.spyOn(console, 'log');
@@ -19,7 +19,7 @@ describe("Will print the pascal triangle", () => {
     expect(results).toEqual(expect.arrayContaining(expected));
   });
 
-  it("the first array will be 1", () => {
+  it("the start and end of each sub array will === 1", () => {
     let expected = true;
     //runs through array, if the start or end 
     //does not === 1 expected will turn to false 

@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/ixnp/WhiteBoardPractice/issues"
   },
-  "homepage": "https://github.com/ixnp/WhiteBoardPractice#readme"
+  "homepage": "https://github.com/ixnp/WhiteBoardPractice#readme",
+  "dependencies": {
+    "jest": "^24.7.1"
+  }
 }

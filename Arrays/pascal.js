@@ -1,3 +1,4 @@
+'use strict';
 //Print out pascals triangle
 //1
 //11
@@ -6,7 +7,7 @@
 //14641
 //15101051
 
-function pascal(rowCount) {
+module.exports = function pascal(rowCount) {
   if (rowCount === 0) return [];
   if (rowCount === 1) return [[1]];
   const rows = [[1], [1, 1]];
@@ -26,6 +27,7 @@ function pascal(rowCount) {
   rows.forEach(function (row) {
     console.log(row);
   });
+ 
   return rows;
 }
 

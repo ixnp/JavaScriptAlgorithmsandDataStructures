@@ -4,7 +4,7 @@
   "description": "",
   "main": "gitTestStuff.js",
   "scripts": {
-    "test": "jest test"
+    "test": "jest"
   },
   "repository": {
     "type": "git",

@@ -27,13 +27,15 @@ class Stack {
       return this.head;
   }
   pop(){
-    if(!this.head) return null;
-    let current = this.head
-    while(current.next.next){
-      current = current.next
+    if(!this.head){
+      return null
+    }else {
+      let temp = this.head
+      this.head = this.head.next
+      temp.next = null;
     }
-    current.next = null;
     this.length--
+    console.log(this.length)
     return this.head;
   }
 }

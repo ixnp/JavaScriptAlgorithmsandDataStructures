@@ -28,15 +28,15 @@ function isBalanced(str) {
     } else if (arr[i] == stack[0]) {
       stack.shift();
     } else if (arr[i] !== stack[0]) {
-      return false;
+      return 'NO';
     }
   }
   if (stack.length != 0) {
-    return false;
+    return 'NO';
   }
-  return true;
+  return 'YES';
 }
 
-console.log(isBalanced("{[(()]}")); //false
-console.log(isBalanced("{[()]}")); //true
-console.log(isBalanced("{[(()[{")); //false
+console.log(isBalanced("{[(()]}")); //NO
+console.log(isBalanced("{[()]}")); //YES
+console.log(isBalanced("{[(()[{")); //NP
